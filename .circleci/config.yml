@@ -7,18 +7,15 @@ jobs:
     machine: true
     steps:
       - checkout
-      # ~/.bashrcに変数を追記する
       - run: |
           TAG=`grep "ENV HUGO_VERSION" docker_image/Dockerfile | awk '{ print $3 }'`
-          echo 'export TAG=${TAG}' >> $BASH_ENV
-      - run: |
-          echo "TAG: ${TAG}"
-      # build開始
-      - run: docker image build --tag tetsuyainfra/hugobase:${TAG} docker_image/ 
-      - run: docker tag tetsuyainfra/hugobase:${TAG} tetsuyainfra/hugobase:latest
+          docker image build --tag tetsuyainfra/hugobase:${TAG} docker_image/ 
+          docker tag tetsuyainfra/hugobase:${TAG} tetsuyainfra/hugobase:latest
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker push tetsuyainfra/hugobase:${TAG}
-      - run: docker push tetsuyainfra/hugobase:latest
+      - run: |
+          TAG=`grep "ENV HUGO_VERSION" docker_image/Dockerfile | awk '{ print $3 }'`
+          docker push tetsuyainfra/hugobase:${TAG}
+          docker push tetsuyainfra/hugobase:latest
 
   diary_build:
     docker:
