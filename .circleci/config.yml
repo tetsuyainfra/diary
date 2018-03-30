@@ -11,9 +11,10 @@ jobs:
           TAG=`grep "ENV HUGO_VERSION" docker_image/Dockerfile | awk '{ print $3 }'`
           echo "TAG: ${TAG}"
           docker image build --tag tetsuyainfra/hugobase:${TAG} docker_image/ 
+          docker tag tetsuyainfra/hugobase:${TAG} tetsuyainfra/hugobase:latest
 
           docker login -u $DOCKER_USER -p $DOCKER_PASS
-          docker push tetsuyainfra/hugobase:${TAG}
+          docker push tetsuyainfra/hugobase:latest
 
   diary_build:
     docker:
