@@ -23,6 +23,8 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
       - run: |
           hugo --source ./site
       - persist_to_workspace:
