@@ -37,6 +37,8 @@ jobs:
       - image: tetsuyainfra/hugobase:latest
     working_directory: ~/project
     steps:
+      - add_ssh_keys:
+          fingerprints: "30:b6:36:96:cd:0c:f9:8e:a0:6e:76:5b:7c:4a:10:ec"
       - attach_workspace:
           at: ~/project
       - run: ls -la .
