@@ -23,8 +23,6 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
       - run: |
           hugo --source ./site
       - persist_to_workspace:
@@ -37,6 +35,9 @@ jobs:
       - image: tetsuyainfra/hugobase:latest
     working_directory: ~/project
     steps:
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
       - attach_workspace:
           at: ~/project
       - run: ls -la site/public
