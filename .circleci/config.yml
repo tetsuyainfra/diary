@@ -22,9 +22,20 @@ jobs:
       - image: tetsuyainfra/hugobase:latest
     steps:
       - checkout
-      - run: pwd
-      - run: ls -la
+      - run: |
+          hugo --source ./site
+      - persist_to_workspace:
+          root: .
+          paths:
+            - site/public
 
+  diary_deploy:
+    docker:
+      - image: tetsuyainfra/hugobase:latest
+    steps:
+      - attach_workspace:
+        at: ~/project
+      - run: pwd
 
 ############################################################
 workflows:
