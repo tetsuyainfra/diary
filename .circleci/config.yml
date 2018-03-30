@@ -1,0 +1,28 @@
+version: 2
+
+jobs:
+  docker_build:
+    machine: true
+    steps:
+      - checkout
+      - run: |
+          echo "run docker build"
+          echo "run docker push"
+  
+  diary_build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: |
+          echo "diary build"
+
+workflows:
+  version: 2        
+  docker_jobs:
+    jobs:
+      - docker_build
+  diary_jobs:
+    jobs:
+      - diary_build
+

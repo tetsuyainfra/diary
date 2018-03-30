@@ -1,0 +1,15 @@
+version: "3"
+services:
+  hugosite: &hugobase
+    build:
+      context: ./docker_image
+      args:
+        APP_UID: 10000
+        APP_GID: 9000
+    image: "hugobase:latest"
+    command: hugo
+  hugoserv: 
+    image: "hugobase:latest"
+    command: hugo server -b http://localhost:1313/ --bind=0.0.0.0
+    ports:
+      - "1313:1313"
