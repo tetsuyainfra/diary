@@ -6,12 +6,17 @@ ARG APP_UID=1001
 ARG APP_GID=1001
 
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} /tmp/hugo.deb
-RUN dpkg -i /tmp/hugo.deb && \
+RUN apt-get update && \
+	apt-get install -y --no-install-recommends \
+		ca-certificates \
+        git \
+        && \
+    dpkg -i /tmp/hugo.deb && \
     rm /tmp/hugo.deb && \
+    rm -rf /var/lib/apt/lists/* && \
     groupadd --gid ${APP_GID} appgroup && \
     useradd  --create-home --uid ${APP_UID} --gid ${APP_GID} --shell /bin/false appusr
 
 EXPOSE  1313
 
 USER    appusr
-
