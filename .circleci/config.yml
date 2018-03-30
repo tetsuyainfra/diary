@@ -8,7 +8,9 @@ jobs:
     steps:
       - checkout
       - run: |
-          echo "run docker build"
+          pwd
+          cd docker_image
+          
 
   diary_build:
     docker:
@@ -25,10 +27,11 @@ workflows:
   # Dockerイメージのビルド&デプロイ
   docker_jobs:
     jobs:
-      - docker_build:
-          filters:
-            branches:
-              only: /^docker-master/
+      - docker_build
+      # - docker_build:
+      #     filters:
+      #       branches:
+      #         only: /^docker-master/
 
   # 日記の更新
   diary_jobs:
