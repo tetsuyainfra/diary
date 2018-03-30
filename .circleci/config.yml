@@ -29,8 +29,8 @@ jobs:
           hugo --source ./site
       - persist_to_workspace:
           root: .
-          # paths:
-          #   - site/public
+          paths:
+            - site/public
 
   diary_deploy:
     docker:
