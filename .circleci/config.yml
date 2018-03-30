@@ -36,6 +36,7 @@ jobs:
       - attach_workspace:
         at: ~/project
       - run: pwd
+      - run: ls -la
 
 ############################################################
 workflows:
@@ -55,4 +56,6 @@ workflows:
           filters:
             branches:
               ignore: /^docker-.*/
+      - diary_deploy:
+          requires: [ diary_build ]
 
