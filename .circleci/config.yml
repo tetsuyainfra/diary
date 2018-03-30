@@ -36,5 +36,5 @@ workflows:
       - diary_build:
           filters:
             branches:
-              only: /^master/
+              ignore: /^docker-.*/
 
