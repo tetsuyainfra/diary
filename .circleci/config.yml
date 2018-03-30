@@ -23,12 +23,12 @@ workflows:
     jobs:
       - docker_build:
           filters:
-            branch:
+            branches:
               only: /^docker-master/
   diary_jobs:
     jobs:
       - diary_build:
           filters:
-            branch:
+            branches:
               ignore: /^docker-master/
 
