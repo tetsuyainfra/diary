@@ -23,6 +23,8 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
       - run: |
           hugo --source ./site
       - persist_to_workspace:
@@ -38,6 +40,10 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: ls -la site/public
+      - run: |
+          git config --global user.name "${GIT_USER}"
+          git config --global user.email "${GIT_EMAIL}"
+
 
 ############################################################
 workflows:
