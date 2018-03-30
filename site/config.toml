@@ -1,0 +1,7 @@
+baseURL = "//tetsuyainfra.github.io/"
+title = "tetsuyainfra 日記"
+languageCode = "ja-JP"
+HasCJKLanguage = true
+[params]
+description = "tetsuyainfra's diary"
+copyright = " (c) 2018 tetsuyainfra "
