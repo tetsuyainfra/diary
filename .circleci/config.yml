@@ -20,6 +20,7 @@ jobs:
   diary_build:
     docker:
       - image: tetsuyainfra/hugobase:latest
+    working_directory: ~/project
     steps:
       - checkout
       - run: |
@@ -32,11 +33,11 @@ jobs:
   diary_deploy:
     docker:
       - image: tetsuyainfra/hugobase:latest
+    working_directory: ~/project
     steps:
       - attach_workspace:
           at: ~/project
-      - run: pwd
-      - run: ls -la
+      - run: ls -la site/public
 
 ############################################################
 workflows:
@@ -58,4 +59,7 @@ workflows:
               ignore: /^docker-.*/
       - diary_deploy:
           requires: [ diary_build ]
+          filters:
+            branches:
+              only: /^master/
 
