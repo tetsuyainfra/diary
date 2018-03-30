@@ -19,11 +19,11 @@ jobs:
 
   diary_build:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: tetsuyainfra/hugobase:latest
     steps:
       - checkout
-      - run: |
-          echo "diary build"
+      - run: pwd
+      - run: ls -la
 
 
 ############################################################
@@ -32,11 +32,10 @@ workflows:
   # Dockerイメージのビルド&デプロイ
   docker_jobs:
     jobs:
-      - docker_build
-      # - docker_build:
-      #     filters:
-      #       branches:
-      #         only: /^docker-master/
+      - docker_build:
+          filters:
+            branches:
+              only: /^docker-master/
 
   # 日記の更新
   diary_jobs:
