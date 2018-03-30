@@ -34,7 +34,7 @@ jobs:
       - image: tetsuyainfra/hugobase:latest
     steps:
       - attach_workspace:
-        at: ~/project
+          at: ~/project
       - run: pwd
       - run: ls -la
 
