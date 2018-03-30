@@ -1,5 +1,7 @@
 version: 2
 
+
+############################################################
 jobs:
   docker_build:
     machine: true
@@ -7,8 +9,7 @@ jobs:
       - checkout
       - run: |
           echo "run docker build"
-          echo "run docker push"
-  
+
   diary_build:
     docker:
       - image: circleci/ruby:2.4.1
@@ -17,18 +18,23 @@ jobs:
       - run: |
           echo "diary build"
 
+
+############################################################
 workflows:
   version: 2        
+  # Dockerイメージのビルド&デプロイ
   docker_jobs:
     jobs:
       - docker_build:
           filters:
             branches:
               only: /^docker-master/
+
+  # 日記の更新
   diary_jobs:
     jobs:
       - diary_build:
           filters:
             branches:
-              ignore: /^docker-master/
+              only: /^master/
 
