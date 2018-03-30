@@ -8,9 +8,11 @@ jobs:
     steps:
       - checkout
       - run: |
-          pwd
-          cd docker_image
-          
+          TAG=`grep "ENV HUGO_VERSION" docker_image/Dockerfile | awk '{ print $3 }'`
+          docker image build --tag hugobase:${TAG} docker_image/ 
+
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker push tetsuyainfra/hugobase:${TAG}
 
   diary_build:
     docker:
