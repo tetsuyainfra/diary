@@ -1,4 +1,4 @@
-baseURL = "//tetsuyainfra.github.io/"
+baseURL = "https://tetsuyainfra.github.io/"
 title = "tetsuyainfra 日記"
 languageCode = "ja-JP"
 HasCJKLanguage = true
