@@ -45,10 +45,12 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: |
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
           git config --global user.name "${GIT_USER}"
           git config --global user.email "${GIT_EMAIL}"
 
-          git clone https://github.com/tetsuyainfra/tetsuyainfra.github.io.git
+          git clone  --depth 1 https://github.com/tetsuyainfra/tetsuyainfra.github.io.git
           cp -av site/public/* tetsuyainfra.github.io/
 
           cd  tetsuyainfra.github.io/
@@ -56,9 +58,8 @@ jobs:
           git add .
           git status
           git commit -m "(Circle CI) ${CIRCLE_SHA1} [ci skip]" || true
-          git push git@github.com:tetsuyainfra/tetsuyainfra.github.io.git || true
+          git push git@github.com:tetsuyainfra/tetsuyainfra.github.io.git
 
-#          git push git@github.com:tetsuyainfra/tetsuyainfra.github.io.git HEAD:master
 
 ############################################################
 workflows:
