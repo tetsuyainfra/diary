@@ -4,12 +4,21 @@ services:
     build:
       context: ./docker_image
       args:
-        APP_UID: 10000
-        APP_GID: 9000
+        # APP_UID: 1000
+        # APP_GID: 1000
+        APP_UID: ${APP_UID}
+        APP_GID: ${APP_GID}
     image: "hugobase:latest"
-    command: hugo
+    command: hugo --source site
+    working_dir: /home/appusr/project
+    volumes:
+      - ${PRJ_ROOT}:/home/appusr/project
+
   hugoserv: 
+    command: hugo server --source site -b http://localhost:1313/ --bind=0.0.0.0
     image: "hugobase:latest"
-    command: hugo server -b http://localhost:1313/ --bind=0.0.0.0
+    working_dir: /home/appusr/project
+    volumes:
+      - ${PRJ_ROOT}:/home/appusr/project
     ports:
       - "1313:1313"
