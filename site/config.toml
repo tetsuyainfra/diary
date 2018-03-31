@@ -4,4 +4,4 @@ languageCode = "ja-JP"
 HasCJKLanguage = true
 [params]
 description = "tetsuyainfra's diary"
-copyright = " (c) 2018 tetsuyainfra "
+copyright = "(c) 2018 tetsuyainfra"
