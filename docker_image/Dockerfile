@@ -9,6 +9,7 @@ ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_B
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends \
 		ca-certificates \
+        openssh-client \
         git \
         && \
     dpkg -i /tmp/hugo.deb && \
