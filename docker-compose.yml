@@ -15,7 +15,7 @@ services:
       - ${PRJ_ROOT}:/home/appusr/project
 
   hugoserv: 
-    command: hugo server --source site -b http://localhost:1313/ --bind=0.0.0.0
+    command: hugo server --source site --baseURL http://localhost:1313/ --bind=0.0.0.0 --watch
     image: "hugobase:latest"
     working_dir: /home/appusr/project
     volumes:
