@@ -1,6 +1,20 @@
 # tetsuyainfra/diary
 this diary is build by hugo & circleci & gh-pages
 
+
+# how to run on local
+```
+$ cp .envrc-sample  .envrc
+$ vi .envrc # choice PRJ_ROOT path
+$ direnv allow
+
+# convert once
+$ docker-compose run hugosite
+
+# convert and editing
+$ docker-compose up  hugoserv
+```
+
 # branch-memo
 - master
   日々の日記を更新する

@@ -1,0 +1,9 @@
+export APP_UID=1001
+export APP_GID=1001
+
+
+# from WindowsSubsystemforLinux with Docker for windows
+# export PRJ_ROOT=/C/repo/diary
+
+# for Linux
+export PRJ_ROOT=$(pwd)
