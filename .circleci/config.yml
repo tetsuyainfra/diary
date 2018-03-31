@@ -52,8 +52,12 @@ jobs:
           git config --global user.email "${GIT_EMAIL}"
       - run: git status
       - run: |
+          GIT_COMMIT_DESC=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
           cd site/public
           git status
+          git add .
+          git commit -m "Auto build: ${GIT_COMMIT_DESC} [ci skip]"
+          git push
 
 
 ############################################################
