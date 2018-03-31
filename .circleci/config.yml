@@ -23,8 +23,9 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
+      - run: |
+          git submodule sync
+          git submodule update --init
       - run: |
           hugo --source ./site
       - persist_to_workspace:
@@ -42,25 +43,24 @@ jobs:
             # - "30:b6:36:96:cd:0c:f9:8e:a0:6e:76:5b:7c:4a:10:ec" # diary
             - "e5:0b:27:ba:9d:69:c5:41:a2:50:bf:36:51:75:ad:b2" # github.io
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
+      - run: |
+          git submodule sync
+          git submodule update --init
+          git submodule foreach git pull origin master
       - attach_workspace:
           at: ~/project
-      - run: ls -la .
-      - run: ls -la site/
-      - run: ls -la site/public
-      - run: |
-          git config --global user.name "${GIT_USER}"
-          git config --global user.email "${GIT_EMAIL}"
-      - run: git status
       - run: |
           GIT_COMMIT_DESC=$(git log --format=oneline -n 1 $CIRCLE_SHA1)
-          ssh-add -L
+          git config --global user.name "${GIT_USER}"
+          git config --global user.email "${GIT_EMAIL}"
+
           cd site/public
-          git status
           git add .
-          git commit -m "Auto build: ${GIT_COMMIT_DESC} [ci skip]"
+          git status
+          git commit -m "(Circle CI) ${GIT_COMMIT_DESC} [ci skip]"
           git push git@github.com:tetsuyainfra/tetsuyainfra.github.io.git HEAD:master
+
+#          git push git@github.com:tetsuyainfra/tetsuyainfra.github.io.git HEAD:master
 
 ############################################################
 workflows:
