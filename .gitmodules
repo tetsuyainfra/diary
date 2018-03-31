@@ -1,3 +1,6 @@
 [submodule "site/public"]
 	path = site/public
 	url = https://github.com/tetsuyainfra/tetsuyainfra.github.io.git
+[submodule "site/themes/blackburn"]
+	path = site/themes/blackburn
+	url = https://github.com/yoshiharuyamashita/blackburn.git
