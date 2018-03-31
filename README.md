@@ -1,6 +1,6 @@
 # tetsuyainfra/diary
 this diary is build by hugo & circleci & gh-pages
-
+see [tetsuyainfra's diary](https://tetsuyainfra.github.io/)
 
 # how to run on local
 ```
