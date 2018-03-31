@@ -58,12 +58,12 @@ jobs:
             cp -av site/public/* tetsuyainfra.github.io/
 
             cd  tetsuyainfra.github.io/
-
             git add .
             git status
             git commit -m "(Circle CI) ${CIRCLE_SHA1} [ci skip]" || true
       - deploy:
           command: |
+            cd  tetsuyainfra.github.io/
             git push git@github.com:tetsuyainfra/tetsuyainfra.github.io.git
 
 
