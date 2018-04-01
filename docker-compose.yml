@@ -8,14 +8,15 @@ services:
         # APP_GID: 1000
         APP_UID: ${APP_UID}
         APP_GID: ${APP_GID}
+        http_proxy: ${http_proxy}
     image: "hugobase:latest"
     command: hugo --source site
     working_dir: /home/appusr/project
     volumes:
       - ${PRJ_ROOT}:/home/appusr/project
 
-  hugoserv: 
-    command: hugo server --source site --baseURL http://localhost:1313/ --bind=0.0.0.0 --watch
+  hugoserv:
+    command: hugo server --source site --baseURL http://${PRJ_HOST}:1313/ --bind=0.0.0.0
     image: "hugobase:latest"
     working_dir: /home/appusr/project
     volumes:
