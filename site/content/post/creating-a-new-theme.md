@@ -1,6 +1,6 @@
 ---
 author: "Michael Henderson"
-date: 2014-09-28
+date: 2018-04-01
 linktitle: Creating a New Theme
 title: Creating a New Theme
 weight: 10
