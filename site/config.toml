@@ -3,8 +3,8 @@ languageCode = "ja-JP"
 HasCJKLanguage = true
 title = "tetsuyainfra 日記"
 theme = "blackburn"
-author = "Yoshiharu Yamashita"
-copyright = "&copy; 2016. All rights reserved."
+author = "tetsuyainfra"
+copyright = "(c) 2018 tetsuyainfra"
 canonifyurls = true
 paginate = 10
 
@@ -14,11 +14,10 @@ paginate = 10
 
 [params]
   description = "tetsuyainfra's diary"
-  copyright = "(c) 2018 tetsuyainfra"
   # Shown in the home page
   subtitle = "A Hugo Theme"
   brand = "Blackburn"
-  googleAnalytics = "Your Google Analytics tracking ID"
+  # googleAnalytics = "Your Google Analytics tracking ID"
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
@@ -44,18 +43,18 @@ paginate = 10
     weight = 3
     identifier = "about"
     url = "/about/"
-  [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 4
-    url = "/contact/"
+#  [[menu.main]]
+#    name = "Contact"
+#    pre = "<i class='fa fa-phone fa-fw'></i>"
+#    weight = 4
+#    url = "/contact/"
 
 [social]
   # Link your social networking accouns to the side menu
   # by entering your username or ID.
-  twitter = "*"
-  facebook = "*"
-  instagram = "*"
-  github = "yoshiharuyamashita"
-  stackoverflow = "*"
-  linkedin = "*"
+#  twitter = "*"
+#  facebook = "*"
+#  instagram = "*"
+  github = "tetsuyainfra"
+#  stackoverflow = "*"
+#  linkedin = "*"
