@@ -1,4 +1,6 @@
 # tetsuyainfra/diary
+[![CircleCI](https://circleci.com/gh/tetsuyainfra/diary/tree/master.svg?style=shield&circle-token=cdc2a09aa38ee27a823da1e12476f4962c1b2d43)](https://circleci.com/gh/tetsuyainfra/diary/tree/master)
+
 this diary is build by hugo & circleci & gh-pages
 see [tetsuyainfra's diary](https://tetsuyainfra.github.io/)
 
