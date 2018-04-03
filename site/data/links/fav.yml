@@ -1,0 +1,10 @@
+---
+weight: 1
+title:  fav
+list:
+- name: hackernews
+  url:  https://news.ycombinator.com/news
+- name: スラド
+  url:  https://srad.jp/
+- name: Youtube
+  url:  https://www.youtube.com/

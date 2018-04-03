@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <h2>{{ .Site.Params.subtitle }}</h2>
+</div>
+
+<div class="content">
+  <article>
+    <h2>
+      日日是好日(にちにち これ こうじつ)
+    </h2>
+    <p>
+      《「碧巌録」から》毎日毎日が無事でよい日であるということ。ひびこれこうじつ。<br />
+      <span style="display: block; text-align: right;">
+        引用：<a href="https://kotobank.jp/word/%E6%97%A5%E6%97%A5%E6%98%AF%E5%A5%BD%E6%97%A5-592061#E3.83.87.E3.82.B8.E3.82.BF.E3.83.AB.E5.A4.A7.E8.BE.9E.E6.B3.89">コトバンク<a>
+      </span>
+  </p>
+  </article>
+</div>
+
+<div class="content">
+
+  {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+    {{ .Render "summary"}}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+
+</div>
+
+{{ partial "footer.html" . }}
