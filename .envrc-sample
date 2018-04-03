@@ -1,6 +1,7 @@
 export APP_UID=1001
 export APP_GID=1001
 
+export PRJ_HOST=localhost
 
 # from WindowsSubsystemforLinux with Docker for windows
 # export PRJ_ROOT=/C/repo/diary

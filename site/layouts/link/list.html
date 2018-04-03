@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <!-- <h2>{{ .Description }}</h1> -->
+</div>
+<div class="content">
+  <div class="pure-g">
+    {{ range sort .Site.Data.links "weight" }}
+    <div class="pure-u-1-1 pure-u-sm-1-3 pure-md-1-4 pure-u-lg-1-4 pure-u-xl-1-5">
+      <div class="link-card">
+      <h2>{{ .title }}</h2>
+      <ul>
+        {{ range .list }}
+        <li>
+          <a href="{{ .url }}">{{ .name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- from contetn/link/_index.md -->
+  {{ .Content }}
+</div>
+{{ partial "footer.html" . }}
