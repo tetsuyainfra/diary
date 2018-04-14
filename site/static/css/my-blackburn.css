@@ -22,6 +22,17 @@ xl	@media screen and (min-width: 80em)	≥ 1280px	.pure-u-xl-*
 }
 */
 
+/* LAYOUT CSS */
+/*
+figure.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+  figure.pure-img-responsive img {
+    width: 100%;
+  }
+*/
+
 
 .link-card {
   /* border: slategrey 1px solid; */
@@ -39,3 +50,32 @@ xl	@media screen and (min-width: 80em)	≥ 1280px	.pure-u-xl-*
   .link-card  ul li {
     margin: 0;
   }
+
+
+/* Table 表示 */
+table {
+    display: block;
+    overflow: auto;
+    margin: 1.5em 0;
+    border-left: 1px solid #ddd;
+    border-collapse: collapse
+}
+
+tr:nth-child(odd) {
+    background-color: #eee
+}
+
+th {
+    font-weight: 700;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 8px 10px
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 8px 10px
+}
