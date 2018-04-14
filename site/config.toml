@@ -44,6 +44,12 @@ paginate = 10
     identifier = "post"
     url = "/post/"
   [[menu.main]]
+    name = "Game@Factorio"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 3
+    identifier = "factorio"
+    url = "/factorio/"
+  [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
     weight = 100
@@ -64,3 +70,4 @@ paginate = 10
   github = "tetsuyainfra"
 #  stackoverflow = "*"
 #  linkedin = "*"
+
