@@ -1,7 +1,7 @@
 ---
-title: "青パックを考える"
+title: "生産(紫)パック"
 date: 2018-04-14T06:29:04Z
-draft: false
+draft: true
 ---
 
 # 参考
@@ -11,7 +11,7 @@ https://wiki.factorio.com/Main_Page
 
 {{<mermaid align="left">}}
 graph LR;
-  GOAL["青パック"]
+  GOAL["軍事パック"]
   style GOAL stroke:red,stroke-width:4px
 
   subgraph 素材ライン
