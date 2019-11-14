@@ -1,27 +1,42 @@
 baseURL = "https://tetsuyainfra.github.io/"
 languageCode = "ja-JP"
 HasCJKLanguage = true
-title = "tetsuyainfra 日記"
+title = "tetsuyainfra"
 theme = "blackburn"
 author = "tetsuyainfra"
 copyright = "(c) 2018 tetsuyainfra"
 canonifyurls = true
 paginate = 10
+defaultContentLanguage = "ja"
+
+[params]
+googleAnalytics = "Your Google Analytics tracking ID"
+disqus = "Your Disqus shortname"
+# CSS name for highlight.js
+highlightjs = "androidstudio"
+brand = "@tetsuyainfra"
+subtitle = "日々是好日"
+dateFormat = "2006/01/02 15:04:05 MST"
+
+[languages]
+[languages.ja]
+  languageName = "日本語"
+  weight = 1
+  [languages.ja.params]
+    subtitle = "日々是好日"
+    description = "tetsuyainfra's diary"
+
+[languages.en]
+  languageName = "English"
+  weight = 2
+  [languages.en.params]
+    subtitle = "Good day every day"
+    description = "tetsuyainfra's diary"
 
 [indexes]
   tag = "tags"
   topic = "topics"
 
-[params]
-  description = "tetsuyainfra's diary"
-  # Shown in the home page
-  subtitle = "日々是好日"
-  brand = "@tetsuyainfra"
-  # googleAnalytics = "Your Google Analytics tracking ID"
-  disqus = "Your Disqus shortname"
-  # CSS name for highlight.js
-  highlightjs = "androidstudio"
-  dateFormat = "02 Jan 2006, 15:04"
 
 [menu]
   # Shown in the side menu.
