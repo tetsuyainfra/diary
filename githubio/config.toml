@@ -32,23 +32,23 @@ paginate = 10
     identifier = "home"
     url = "/"
   [[menu.main]]
-    name = "Link"
-    pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 2
-    identifier = "link"
-    url = "/link/"
-  [[menu.main]]
-    name = "Posts"
+    name = "日記"
     pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 3
+    weight = 2
     identifier = "post"
     url = "/post/"
   [[menu.main]]
-    name = "Game@Factorio"
+    name = "Factorio"
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 3
     identifier = "factorio"
     url = "/factorio/"
+  [[menu.main]]
+    name = "Link"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 4
+    identifier = "link"
+    url = "/link/"
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
