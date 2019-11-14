@@ -5,7 +5,14 @@ see [tetsuyainfra's diary](https://tetsuyainfra.github.io/)
 # how to run on local
 ```
 cd githubio
-hugo server
+
+# in bash
+hugo new post/$(date -I)_HOGE.md
+# in fish
+hugo new post/(date -I)_HOGE.md 
+
+# preview
+hugo server -D
 
 # deploy
 ./deploy.sh
