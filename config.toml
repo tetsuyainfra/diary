@@ -19,6 +19,8 @@ brand = "@tetsuyainfra"
 subtitle = "日々是好日"
 dateFormat = "2006/01/02 15:04:05 MST"
 contentListDateFormat = "01/02 15:04:05 MST"
+custom_css = ["css/my-blackburn.css"]
+custom_js = []
 
 [languages]
 [languages.ja]

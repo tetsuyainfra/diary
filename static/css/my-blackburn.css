@@ -79,3 +79,26 @@ td {
     border-right: 1px solid #ccc;
     padding: 8px 10px
 }
+
+/* fluid_imgの拡張 */
+img.pure-img {
+}
+
+.post-img-meta {
+  margin-top: -3.5em;
+  margin-left: 1em;
+  color: #fff;
+  /* text-shadow: 0 1px 1px #333; */
+  text-shadow:
+    black 2px 0px 2px, black -2px 0px 2px,
+    black 0px -2px 2px, black -2px 0px 2px,
+    black 2px 2px 2px, black -2px 2px 2px,
+    black 2px -2px 2px, black -2px -2px 2px,
+    black 1px 2px 2px, black -1px 2px 2px,
+    black 1px -2px 2px, black -1px -2px 2px,
+    black 2px 1px 2px, black -2px 1px 2px,
+    black 2px -1px 2px, black -2px -1px 2px,
+    black 1px 1px 2px, black -1px 1px 2px,
+    black 1px -1px 2px, black -1px -1px 2px;
+}
+
