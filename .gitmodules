@@ -1,6 +1,6 @@
 [submodule "githubio/themes/blackburn"]
-	path = githubio/themes/blackburn
+	path = themes/blackburn
 	url = https://github.com/yoshiharuyamashita/blackburn.git
 [submodule "githubio/public"]
-	path = githubio/public
+	path = public
 	url = git@github.com:tetsuyainfra/tetsuyainfra.github.io.git
