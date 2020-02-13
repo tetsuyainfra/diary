@@ -8,5 +8,14 @@ list:
   url: http://blog.livedoor.jp/wisteriear/
 - name: ちもろぐ
   url: https://chimolog.co/
+- name: Phoronix
+  url: https://www.phoronix.com/scan.php?page=home
+- name: Tom's Hardware
+  url: https://www.tomshardware.com/
+- name: AnandTech
+  url: https://www.anandtech.com/
+- name: Guru3D.co
+  url: https://www.guru3d.com/
 - name: VideoCardz.com
   url: https://videocardz.com/
+
