@@ -8,6 +8,8 @@ list:
   url: http://blog.livedoor.jp/wisteriear/
 - name: ちもろぐ
   url: https://chimolog.co/
+- name: RTINGS.com
+  url: https://www.rtings.com/
 - name: Phoronix
   url: https://www.phoronix.com/scan.php?page=home
 - name: Tom's Hardware
@@ -20,3 +22,4 @@ list:
   url: https://videocardz.com/
 - name: PCパーツまとめ
   url: http://blog.livedoor.jp/bluejay01-review/
+
