@@ -8,5 +8,7 @@ list:
   url:  https://srad.jp/
 - name: Qiita
   url:  https://qiita.com/
+- name: dev.to
+  url:  https://dev.to/
 - name: Youtube
   url:  https://www.youtube.com/
