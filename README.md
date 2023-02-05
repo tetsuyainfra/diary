@@ -6,6 +6,10 @@ see [tetsuyainfra's diary](https://tetsuyainfra.github.io/)
 # how to run on local
 
 ```
+# Install Hugo
+go install -tags extended github.com/gohugoio/hugo@latest
+# docker pull klakegg/hugo
+
 git submodule init
 git submodule update
 

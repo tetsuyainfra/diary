@@ -1,1 +1,4 @@
 .envrc
+
+# maybe we can ignore...
+.hugo_build.lock
